@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>중학교 수학</title>
+
+<!-- 아이패드 화면에 꽉 차게, 확대 방지 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+<!-- 홈 화면에서 Safari 주소창 없이 전체화면으로 실행 -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="중학 수학" />
+<meta name="theme-color" content="#F2F6FF" />
+<meta name="description" content="2022 개정 교육과정 중학교 1~3학년 수학 수업용 조작 화면" />
+
+<link rel="manifest" href="./manifest.json" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="icon" href="./icon-192.png" />
+
+<link rel="stylesheet" href="./fonts.css" />
+<style>
+  html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#F2F6FF; }
+  body {
+    overscroll-behavior: none;          /* 화면 끝에서 튕김 방지 */
+    -webkit-touch-callout: none;        /* 길게 눌러도 메뉴 안 뜸 */
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #root { height:100%; }
+  input, textarea { -webkit-user-select:auto; user-select:auto; }
+  /* 홈 인디케이터 영역 확보 */
+  @supports (padding: env(safe-area-inset-bottom)) {
+    #root { padding-bottom: env(safe-area-inset-bottom); box-sizing:border-box; }
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
